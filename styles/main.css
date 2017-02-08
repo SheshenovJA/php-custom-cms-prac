@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,800');
+body{
+font-family: 'Fira Sans Extra Condensed', sans-serif;
+background-color: #212121;
+color: rgba(255, 255, 255, 1);
+}
+header{
+  display: flex;
+
+}
+
+.navigation {
+  width: 70%;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-size: 15pt;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.navigation * {
+  box-sizing: border-box;
+}
+.navigation li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 10px 1.5em;
+  padding: 0;
+}
+.navigation a {
+  padding: 0.5em 0;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.navigation a:before,
+.navigation a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.navigation a:before {
+  top: 0;
+  display: block;
+  height: 3px;
+  width: 0%;
+  content: "";
+  background-color: #345d8b;
+}
+.navigation a:after {
+  left: 0;
+  top: 0;
+  padding: 0.5em 0;
+  position: absolute;
+  content: attr(data-hover);
+  color: #ffffff;
+  white-space: nowrap;
+  max-width: 0%;
+  overflow: hidden;
+}
+.navigation a:hover:before,
+.navigation .current a:before {
+  opacity: 1;
+  width: 100%;
+}
+.navigation a:hover:after,
+.navigation .current a:after {
+  max-width: 100%;
+}
+.logo{
+opacity: .5;
+}
+section.main-content {
+  padding: 30px 0 0 33%;
+  width: 700px;
+}
